@@ -1,0 +1,32 @@
+%h4.h
+  E-Commerce Site
+%input#create_cart.btn-primary{:type => 'submit', :value => 'Create cart'}/
+#new_cart{:style => 'display: none'}
+  = render new_cart_path
+%h4.h
+  Cart Details
+%table.tble-trd
+  %tr{:style => 'font-size: 20px'}
+    %td
+      = 'Order Number'
+    %td
+      = 'Product Names'
+    %td
+      = 'Total Price'
+    %td
+  - @carts.each do |cart|
+    %tr{:style => 'font-size: 15px'}
+      %td
+        = cart.number
+      %td
+        = get_product_names(cart)
+      %td
+        = get_total_price(cart)
+      %td
+        %input.btn-primary{:type => 'submit', :value => 'Checkout/Create Order'}/
+
+:javascript
+  $('#create_cart').click(function (){
+    $('#new_cart').show();
+    $('#create_cart').hide();
+  });

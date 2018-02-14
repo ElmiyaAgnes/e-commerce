@@ -1,0 +1,3 @@
+E-Commerce App - A learning app 
+
+An app which can be used for purchasing products in a cart. By this app user can create his Cart with set of products. At the time of checkout we calculate the total amount of all products with its tax and shipping charges and we place an order for the items in the cart. Placing order also does payment services. 'ActiveMerchant' is used for payment purpose.

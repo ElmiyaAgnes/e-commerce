@@ -1,0 +1,16 @@
+body,html {
+  background-color:#2ab7c4;padding: 0;
+    margin: 0;
+    height: 100%;
+  color:#FFFFFF;}
+.btn-primary{
+  background-color:#00aeef;
+  border-bottom:3px solid #242122;}
+.tble-trd{
+  width:100%;
+  table-layout: fixed;
+  font-size:10px;}
+.h{
+  margin-left: 40%;
+  color: aqua;
+}

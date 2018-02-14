@@ -1,0 +1,33 @@
+= form_for :cart, :url => { :action => "create" } do |f|
+	%tr
+		%td
+			= f.label 'Cart Number'
+		%td
+			= f.text_field(:cart_number)
+		%div#product_list
+			%td
+				= f.label 'Product Name'
+			%td
+				= f.select(:product, @products)
+			%td
+				= f.label 'Product count'
+			%td
+				= f.select(:product_count, ['', '1', '2', '3'])
+		%td
+			= link_to "Add More Products", '', :onClick => 'add_products();'
+	%tr
+		%td
+			%td
+			= f.submit 'Create cart'
+
+
+:javascript
+	$("#cart_products").select2({
+		width: '100%',
+		placeholder: "Select Product"
+	});
+
+	function add_products(){
+		var product_list = $('#product_list').html();
+		$('#product_list').append(product_list);
+	}
